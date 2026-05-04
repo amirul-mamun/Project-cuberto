@@ -1,0 +1,226 @@
+:root {
+    --mousefollowercolor: black;
+}
+body{
+    background-color: #fff;
+}
+.mousefollower {
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    top: -10%;
+    left: -10%;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    z-index: 99999;
+    mix-blend-mode: exclusion;
+    background-color: var(--mousefollowercolor);
+}
+
+#behindmouse {
+    background-color: white;
+}
+
+.mask {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.circle {
+    text-align: center;
+    pointer-events: none;
+    box-sizing: content-box;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -10%;
+    left: -10%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    position: absolute;
+    z-index: 9999;
+    background-color: #000000e8;
+    color: #fff;
+    font-family: inherit;
+    font-size: 10px;
+}
+
+.sheryelem span {
+    display: inline-block;
+}
+
+.parent {
+    display: inline-block;
+}
+
+#controlKit .panel .group-list .group .sub-group-list .sub-group ul li,
+#controlKit .panel .scrollBar,
+#controlKit .panel {
+    background-image: none !important;
+    background-color: #181c20 !important;
+}
+#controlKit .panel .group-list .group .sub-group-list .sub-group:last-of-type{
+    border-bottom: 1px solid #222729 !important;
+}
+#controlKit .panel .group-list .group .sub-group-list .sub-group .head-inactive{
+    margin: 5px;
+}
+
+#controlKit .panel .head,
+#controlKit .panel .panel-head-inactive,
+#controlKit .picker .head,
+#controlKit .picker {
+    background-color: #292d39 !important;
+}
+
+#controlKit .panel .button,
+#controlKit .picker .button {
+    background-color: #383c4a ;
+    background-image: none !important;
+    box-shadow: none !important;
+    border-radius: 7px !important;
+    color: #8c92a4 ;
+    font-size: .9em !important;
+    text-shadow: none !important;
+    font-weight: 800 !important;
+}
+
+#controlKit .picker canvas{
+    position: relative;
+}
+
+#controlKit .panel .button:hover{
+    background-color: #007bff !important;
+    color: #fff !important;
+}
+#controlKit .panel .button:active{
+    background-color: #292d39 !important;
+    color: #fff !important;
+}
+
+#controlKit .panel .head .label,
+#controlKit .picker .head .label,#controlKit .panel .group-list .group .sub-group-list .sub-group .head .wrap .label, #controlKit .panel .group-list .group .sub-group-list .sub-group .head-inactive .wrap .label {
+    color: #8c92a4 !important;
+    font-size: .8em !important;
+    text-shadow: none !important;
+    font-weight: 800 !important;
+
+}
+
+#controlKit .panel .scrollBar .track .thumb {
+    background-color: #383c4a !important;
+    box-shadow: none !important;
+}
+
+#controlKit .panel .select , #controlKit .panel .select-active ,#controlKit .panel .group-list .group .sub-group-list .sub-group .head-inactive{
+    border-radius: 7px !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    color: #8c92a4 !important;
+    background:  #292d39 !important;
+    text-align: center !important;
+}
+
+
+#controlKit .panel,
+#controlKit .options ul,
+#controlKit .options ul li,
+#controlKit .options {
+    border-radius: 7px !important;
+    background-color: #fff;
+    color: #000;
+    text-shadow: none !important;
+    text-align: center !important;
+
+}
+ul.sub-group-list{
+    margin-top: 5px !important;
+}
+#controlKit .options ul li:hover,
+#controlKit .options ul .li-selected,
+#controlKit .panel .slider-handle {
+    background: #007bff !important;
+}
+
+#controlKit .panel .group-list .group .sub-group-list .sub-group .wrap .label {
+    width: auto !important;
+}
+#controlKit{
+    z-index: 999999999999999999;
+    position: fixed !important;
+}
+
+#controlKit .panel .menu input[type=button],
+#controlKit .panel .menu input[type=button]:hover,
+#controlKit .panel .menu-active input[type=button],
+#controlKit .picker .menu input[type=button] {
+    box-shadow: none !important;
+    background-color: #00000000;
+}
+
+.hovercircle{
+    position: relative;
+    z-index: 5;
+    display: inline-block;
+}
+
+.hovercircle:hover{
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    color: #000;
+}
+
+.movercirc {
+    mix-blend-mode: exclusion;
+    pointer-events: none;
+    position: fixed;
+    z-index: 15;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    width: 0;
+    opacity: 0;
+    overflow: hidden;
+    height: 0;
+    max-width: 250px;
+    max-height: 250px;
+}
+
+.movercirc img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;  
+    transform: translate(-50%,-50%);
+}
+
+.movercirc.blend {
+    mix-blend-mode: exclusion;
+    filter: invert(1);
+}
+
+.just-a-white-blend-screen {
+    background: #ffffff;
+    /* z-index: -1; */
+}
+
+.movercirc video{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1.3);
+}
+
+._canvas_container {
+    pointer-events: none;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    left: 0;
+}
