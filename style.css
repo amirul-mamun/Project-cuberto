@@ -312,3 +312,8 @@ html , body{
     transform: translate(-50%, -50%)  !important;
 }
 
+.btn button:hover{
+   background-color: black;
+   color: white;
+   transition: all ease 0.3;
+}

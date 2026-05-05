@@ -20,7 +20,7 @@ gsap.to(".fleftelem", {
 
 let sections = document.querySelectorAll('.fleftelem')
 Shery.imageEffect(".images", {
-    style:4,
+    style:5,
     config:{onMouse : {value : 1}},
     slideStyle: (setScroll) =>{
          sections.forEach(function(section , index){
@@ -35,3 +35,4 @@ Shery.imageEffect(".images", {
          })
     }
 })
+
